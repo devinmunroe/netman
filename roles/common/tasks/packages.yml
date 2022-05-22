@@ -1,0 +1,6 @@
+---
+- name: Install Common Packages
+  package:
+    name: ['iptables','net-snmp','net-snmp-utils','wget']
+    state: present
+  tags: common

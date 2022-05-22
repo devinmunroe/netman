@@ -1,0 +1,16 @@
+---
+- name: Update systems
+  dnf:
+    name: '*'
+    state: latest
+  register: dnf_update_status
+
+- name: Remove unused Packages
+  dnf:
+    autoremove: yes
+  tags: updates
+
+- name: Reboot when updates are complete
+  reboot:
+  when: dnf_update_status.changed
+  tags: updates

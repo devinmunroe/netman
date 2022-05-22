@@ -1,0 +1,7 @@
+---
+- name: Configure SNMP
+  copy:
+    src: /etc/ansible/roles/common/files/snmp/snmpd.conf
+    dest:  /etc/snmp/snmpd.conf
+  notify: restart snmpd
+  tags: Common

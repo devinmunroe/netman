@@ -1,0 +1,17 @@
+---
+- name: Disable Firewalld
+  systemd:
+    name: firewalld
+    state: stopped
+    enabled: false
+  tags: common_firewall
+
+- name: Allow SNMP
+  iptables:
+    chain: INPUT
+    protocol: udp
+    source: "{{  snmp_container_ip }}"
+    destination_port: 161
+    jump: ACCEPT
+    comment: Allow SNMP
+  tags: common_firewall

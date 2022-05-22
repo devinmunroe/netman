@@ -1,0 +1,6 @@
+---
+- include: configure.yml
+- include: packages.yml
+- include: snmp.yml
+- include: firewall.yml
+- include: updates.yml

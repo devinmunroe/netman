@@ -1,0 +1,6 @@
+---
+  - name: Install Podman
+    package:
+      name: ['podman']
+      state: present
+    tags: controller

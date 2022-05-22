@@ -1,0 +1,5 @@
+ansible_ssh_user: ansible
+ansible_ssh_key: /home/ansible/.ssh/id_rsa
+ansible_become_method: su
+ansible_become_user: root
+ansible_become_password: Amf123456

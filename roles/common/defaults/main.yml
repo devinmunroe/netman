@@ -1,0 +1,4 @@
+snmp_co_string: public
+snmp_admin_name: John Doe
+snmp_admin_email: admin@root.com
+snmp_container_ip: 0.0.0.0

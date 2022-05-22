@@ -1,0 +1,6 @@
+- name: Start and Enable podman
+  systemd:
+    name: podman
+    state: restarted
+    enabled: true
+  tags: controller
